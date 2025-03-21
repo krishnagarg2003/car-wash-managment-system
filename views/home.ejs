@@ -3,10 +3,54 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Basic EJS Page</title>
-    <link rel="stylesheet" href="/styles.css">
+    <title>Car Wash Management System</title>
+    <link rel="stylesheet" href="/css/home.css">
 </head>
 <body>
-    <h1>Welcome to car wash managment -system</h1>
+    <header>
+        <div class="navbar">
+            <h1 class="logo">CarWashPro</h1>
+            <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="/services">Services</a></li>
+                <li><a href="/about">About</a></li>
+                <li><a href="/contact">Contact</a></li>
+                <li><a href="/login" class="login-btn">Login</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="hero-content">
+            <h2>Clean Cars, Happy Customers!</h2>
+            <p>Your trusted car wash & detailing solution.</p>
+            <a href="/book" class="btn-primary">Book Now</a>
+        </div>
+    </section>
+
+    <section class="features">
+        <h2>Our Services</h2>
+        <div class="feature-cards">
+            <div class="card">
+                <img src="/images/wash.png" alt="Car Wash">
+                <h3>Car Wash</h3>
+                <p>Premium car wash services with the best cleaning agents.</p>
+            </div>
+            <div class="card">
+                <img src="/images/detailing.png" alt="Detailing">
+                <h3>Detailing</h3>
+                <p>Professional car detailing for both interior and exterior.</p>
+            </div>
+            <div class="card">
+                <img src="/images/polish.png" alt="Polishing">
+                <h3>Polishing</h3>
+                <p>High-quality polish for long-lasting shine and protection.</p>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>© 2025 CarWashPro. All rights reserved.</p>
+    </footer>
 </body>
 </html>
