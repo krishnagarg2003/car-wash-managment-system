@@ -11,7 +11,25 @@ router.get("/", async (req, res) => {
 router.get('/services', (req, res) => {
     res.render('services', { title: 'Our Services' });
 });
+router.get('/about', (req, res) => {
+    res.render('about', { title: 'About' });
+});
 
+router.get('/contact', (req, res) => {
+    res.render('contact', { title: 'Contact' });
+});
+
+router.get('/login', (req, res) => {
+    res.render('login', { title: 'Login' });
+});
+
+router.get('/register', (req, res) => {
+    res.render('register', { title: 'register' });
+});
+
+router.get('/book', (req, res) => {
+    res.render('book', { title: 'Book' });
+});
 // );
 // router.get("/Register", async (req, res) => {
  

@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - CarWashPro</title>
+    <link rel="stylesheet" href="/css/home.css">
+    <style>
+        .contact-hero {
+            background: url('/images/contact-bg.jpg') center/cover no-repeat;
+            padding: 100px 20px;
+            color: #fff;
+            text-align: center;
+        }
+        .contact-container {
+            max-width: 1200px;
+            margin: 50px auto;
+            padding: 20px;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+        }
+        .contact-info h3, .contact-form h3 {
+            margin-bottom: 20px;
+            color: #333;
+        }
+        .contact-info p, .contact-info a {
+            font-size: 16px;
+            color: #555;
+            margin-bottom: 10px;
+        }
+        .contact-form form {
+            display: flex;
+            flex-direction: column;
+        }
+        .contact-form input, .contact-form textarea {
+            padding: 12px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            font-size: 16px;
+        }
+        .contact-form button {
+            background-color: #007BFF;
+            color: #fff;
+            border: none;
+            padding: 14px;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        .contact-form button:hover {
+            background-color: #0056b3;
+        }
+        @media(max-width: 768px) {
+            .contact-container {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="navbar">
+            <h1 class="logo">CarWashPro</h1>
+            <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="/services">Services</a></li>
+                <li><a href="/about">About</a></li>
+                <li><a href="/contact" class="active">Contact</a></li>
+                <li><a href="/login" class="login-btn">Login</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <section class="contact-hero">
+        <h2>Contact CarWashPro</h2>
+        <p>We’d love to hear from you! Get in touch for any queries or bookings.</p>
+    </section>
+
+    <section class="contact-container">
+        <div class="contact-info">
+            <h3>Get In Touch</h3>
+            <p>Email: <a href="mailto:info@carwashpro.com">info@carwashpro.com</a></p>
+            <p>Phone: <a href="tel:+911234567890">+91 123 456 7890</a></p>
+            <p>Location: 123, Clean Street, Shine City, India</p>
+            <p>Working Hours: 9 AM - 7 PM (Mon - Sat)</p>
+        </div>
+
+        <div class="contact-form">
+            <h3>Send Us a Message</h3>
+            <form action="/contact-submit" method="POST">
+                <input type="text" name="name" placeholder="Your Name" required>
+                <input type="email" name="email" placeholder="Your Email" required>
+                <textarea name="message" placeholder="Your Message" rows="6" required></textarea>
+                <button type="submit">Send Message</button>
+            </form>
+        </div>
+    </section>
+
+    <footer>
+        <p>© 2025 CarWashPro. All rights reserved.</p>
+    </footer>
+</body>
+</html>
