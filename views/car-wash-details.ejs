@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Car Wash Details - CarWashPro</title>
+    <link rel="stylesheet" href="/css/home.css">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: #f5f5f5;
+        }
+        .details-container {
+            max-width: 1000px;
+            margin: 50px auto;
+            display: flex;
+            background: white;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        }
+        .details-image {
+            flex: 1;
+            background: url('/images/car_wash.jpg') center center/cover no-repeat;
+            min-height: 400px;
+        }
+        .details-content {
+            flex: 1;
+            padding: 40px;
+        }
+        .details-content h2 {
+            font-size: 32px;
+            color: #333;
+            margin-bottom: 20px;
+        }
+        .details-content p {
+            font-size: 16px;
+            color: #555;
+            margin-bottom: 15px;
+            line-height: 1.6;
+        }
+        .features-list {
+            list-style: none;
+            padding: 0;
+        }
+        .features-list li {
+            font-size: 16px;
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+        }
+        .features-list li::before {
+            content: "✔";
+            color: green;
+            font-weight: bold;
+            margin-right: 10px;
+        }
+        .price {
+            font-size: 20px;
+            font-weight: bold;
+            color: #007BFF;
+            margin-top: 15px;
+        }
+        .book-now {
+            display: inline-block;
+            padding: 12px 20px;
+            background: #007BFF;
+            color: white;
+            text-decoration: none;
+            font-size: 18px;
+            border-radius: 8px;
+            margin-top: 20px;
+            transition: 0.3s;
+        }
+        .book-now:hover {
+            background: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="navbar">
+            <h1 class="logo">CarWashPro</h1>
+            <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="/services">Services</a></li>
+                <li><a href="/about">About</a></li>
+                <li><a href="/contact">Contact</a></li>
+                <!-- <li><a href="/login" class="login-container1">Login</a></li> -->
+            </ul>
+        </div>
+    </header>
+
+    <div class="details-container">
+        <div class="details-image"></div>
+        <div class="details-content">
+            <h2>Premium Car Wash</h2>
+            <p>Experience the best car wash service with high-quality cleaning solutions and expert professionals.</p>
+            <ul class="features-list">
+                <li>Exterior hand wash</li>
+                <li>Interior vacuum cleaning</li>
+                <li>Dashboard and console cleaning</li>
+                <li>Tire and rim cleaning</li>
+                <li>Waterless eco-friendly wash</li>
+            </ul>
+            <p class="price">Starting from 300</p>
+            <a href="/book" class="book-now">Book Now</a>
+        </div>
+    </div>
+    <footer>
+        <p>© 2025 CarWashPro. All rights reserved.</p>
+    </footer> 
+</body>
+</html>

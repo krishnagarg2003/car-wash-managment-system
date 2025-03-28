@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Car Detailing - CarWashPro</title>
+    <link rel="stylesheet" href="/css/home.css">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(135deg, #f0f4f7, #cce0f4);
+        }
+        .container {
+            max-width: 1100px;
+            margin: 50px auto;
+            background: #fff;
+            border-radius: 20px;
+            padding: 40px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.1);
+            display: flex;
+            align-items: center;
+            gap: 30px;
+        }
+        .image {
+            flex: 1;
+        }
+        .image img {
+            width: 100%;
+            border-radius: 20px;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+        }
+        .content {
+            flex: 2;
+        }
+        .content h2 {
+            font-size: 32px;
+            margin-bottom: 20px;
+            color: #333;
+        }
+        .content p {
+            font-size: 18px;
+            line-height: 1.6;
+            color: #555;
+            margin-bottom: 20px;
+        }
+        .features {
+            list-style: none;
+            padding: 0;
+        }
+        .features li {
+            font-size: 18px;
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+        }
+        .features li::before {
+            content: "✔";
+            color: #007BFF;
+            font-size: 20px;
+            margin-right: 10px;
+        }
+        .back-button {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 12px 20px;
+            background: #007BFF;
+            color: #fff;
+            border-radius: 10px;
+            text-decoration: none;
+            font-size: 18px;
+            transition: 0.3s;
+        }
+        .back-button:hover {
+            background: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="image">
+            <img src="/images/car_details.jpg" alt="Car Detailing">
+        </div>
+        <div class="content">
+            <h2>Professional Car Detailing</h2>
+            <p>Experience top-notch car detailing services to give your vehicle a brand-new look. Our experts ensure high-quality cleaning and detailing for both interior and exterior.</p>
+            <ul class="features">
+                <li>Full Interior & Exterior Detailing</li>
+                <li>High-Quality Waxing & Polishing</li>
+                <li>Deep Carpet & Upholstery Cleaning</li>
+                <li>Headlight Restoration</li>
+                <li>Engine Bay Cleaning</li>
+            </ul>
+            <a href="/services" class="back-button">← Back to Services</a>
+        </div>
+    </div>
+</body>
+</html>

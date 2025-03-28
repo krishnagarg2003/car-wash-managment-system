@@ -30,6 +30,14 @@ router.get('/register', (req, res) => {
 router.get('/book', (req, res) => {
     res.render('book', { title: 'Book' });
 });
+router.get('/car-wash-details', (req, res) => {
+    res.render('car-wash-details', { title: 'car-wash-details' });
+});
+
+router.get('/detailing', (req, res) => {
+    res.render('detailing', { title: 'detailing' });
+});
+
 // );
 // router.get("/Register", async (req, res) => {
  

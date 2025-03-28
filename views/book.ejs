@@ -13,16 +13,15 @@
             background: linear-gradient(135deg, #f0f4f7, #cce0f4);
         }
         .booking-section {
+            background: url('/images/book_car.webp') center center/cover no-repeat;
             display: flex;
             align-items: center;
             justify-content: center;
             padding: 60px;
-            gap: 50px;
         }
         .booking-image {
             flex: 1;
-            height: 500px;
-            background: url('/images/book-car-wash.jpg') center center/cover no-repeat;
+            height: 800px;
             border-radius: 20px;
             animation: pulse 4s infinite alternate;
         }
@@ -78,6 +77,18 @@
     </style>
 </head>
 <body>
+    <header>
+        <div class="navbar">
+            <h1 class="logo">CarWashPro</h1>
+            <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="/services">Services</a></li>
+                <li><a href="/about">About</a></li>
+                <li><a href="/contact">Contact</a></li>
+                <!-- <li><a href="/login" class="login-container1">Login</a></li> -->
+            </ul>
+        </div>
+    </header>
     <div class="booking-section">
         <div class="booking-image"></div>
         <div class="booking-form-container">
@@ -101,5 +112,8 @@
             </form>
         </div>
     </div>
+    <footer>
+        <p>© 2025 CarWashPro. All rights reserved.</p>
+    </footer>
 </body>
 </html>
