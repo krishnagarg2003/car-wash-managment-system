@@ -49,35 +49,43 @@ header {
 }
 
 .hero {
-    background: url('/images/services-banner.jpg') no-repeat center center/cover;
+    background: linear-gradient(135deg, rgba(26,115,232,0.7), rgba(0,0,0,0.7)), 
+                url('/images/services-banner.jpg') no-repeat center center/cover;
     height: 60vh;
     display: flex;
     align-items: center;
     justify-content: center;
-    position: relative;
-    color: #fff;
-}
-
-.hero::after {
-    content: "";
-    position: absolute;
-    inset: 0;
-    background: rgba(0, 0, 0, 0.5);
-}
-
-.hero-content {
-    position: relative;
-    z-index: 1;
     text-align: center;
+    color: #fff;
+    padding: 20px;
 }
 
 .hero-content h2 {
-    font-size: 48px;
+    font-size: 50px;
+    font-weight: bold;
     margin-bottom: 15px;
+    letter-spacing: 1px;
 }
 
 .hero-content p {
-    font-size: 20px;
+    font-size: 22px;
+    margin-bottom: 20px;
+}
+
+.hero-content .btn-primary {
+    background: #ff9800;
+    color: #fff;
+    padding: 14px 28px;
+    border-radius: 30px;
+    font-size: 18px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s ease-in-out;
+}
+
+.hero-content .btn-primary:hover {
+    background: #e68900;
+    transform: scale(1.05);
 }
 
 .services {
@@ -99,33 +107,85 @@ header {
     margin: auto;
 }
 
+.service-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    max-width: 1200px;
+    margin: auto;
+}
+
 .card {
-    background-color: #f9f9f9;
-    padding: 25px;
+    background: #fff;
     border-radius: 15px;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
-    transition: transform 0.3s, box-shadow 0.3s;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    text-align: center;
+    padding: 20px;
+    position: relative;
+    overflow: hidden;
 }
 
 .card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 8px 18px rgba(0,0,0,0.1);
+    transform: translateY(-8px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
 }
 
 .card img {
-    width: 70px;
-    margin-bottom: 20px;
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    margin-bottom: 15px;
 }
 
 .card h3 {
-    margin-bottom: 10px;
     font-size: 22px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #333;
 }
 
 .card p {
-    font-size: 15px;
+    font-size: 16px;
     color: #666;
+    margin-bottom: 10px;
 }
+
+.card .learn-more {
+    display: inline-block;
+    font-size: 16px;
+    color: #1a73e8;
+    font-weight: bold;
+    margin-top: 10px;
+    cursor: pointer;
+}
+
+.card .learn-more:hover {
+    text-decoration: underline;
+}
+
+.card a {
+    text-decoration: none;  /* Remove the underline */
+    color: inherit;  /* Ensure text color remains the same */
+    display: block;  /* Make the entire card clickable */
+    padding: 0;
+}
+
+.card .learn-more {
+    display: inline-block;
+    font-size: 16px;
+    color: #1a73e8;
+    font-weight: bold;
+    margin-top: 10px;
+    cursor: pointer;
+    transition: color 0.3s ease-in-out;
+}
+
+.card .learn-more:hover {
+    text-decoration: none;  /* Ensure underline doesn't appear on hover */
+    color: #0c5ac7; /* Slightly darker blue on hover */
+}
+
 
 .cta-section {
     background-color: #1a73e8;

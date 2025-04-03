@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Booking - Car Wash Management System</title>
+    <link rel="stylesheet" href="/css/home.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        .container {
+            width: 80%;
+            margin: auto;
+            padding: 20px;
+        }
+
+        h2 {
+            text-align: center;
+            color: #333;
+        }
+
+        .tabs {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 20px;
+        }
+
+        .tab {
+            padding: 10px 20px;
+            cursor: pointer;
+            border: 1px solid #ccc;
+            background-color: #fff;
+            margin: 0 5px;
+            border-radius: 5px;
+        }
+
+        .tab.active {
+            background-color: #007bff;
+            color: white;
+        }
+
+        .tab-content {
+            display: none;
+            background: white;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .tab-content.active {
+            display: block;
+        }
+
+        .booking-card {
+            background: #fff;
+            margin: 10px 0;
+            padding: 15px;
+            border-radius: 5px;
+            box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .booking-card h3 {
+            margin: 0;
+            color: #007bff;
+        }
+
+        .booking-card p {
+            margin: 5px 0;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="navbar">
+            <h1 class="logo">CarWashPro</h1>
+            <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="/services">Services</a></li>
+                <li><a href="/about">About</a></li>
+                <li><a href="/contact">Contact</a></li>
+                <li><a href="/bookings">Booking</a></li>
+                <li id="profile-section" style="display: none;"><a href="/profile">Profile</a></li>
+                <li id="login-section"><a href="/login" class="login-container1">Login</a></li>
+            </ul>
+        </div>
+    </header>
+
+<div class="container">
+    <h2>My Bookings</h2>
+
+    <div class="tabs">
+        <div class="tab active" onclick="showTab('pending')">Pending</div>
+        <div class="tab" onclick="showTab('in-process')">In Process</div>
+        <div class="tab" onclick="showTab('completed')">Completed</div>
+    </div>
+
+    <div id="pending" class="tab-content active">
+        <div class="booking-card">
+            <h3>Booking #12345</h3>
+            <p>Service: Exterior Car Wash</p>
+            <p>Status: Pending</p>
+            <p>Date: 25th March 2025</p>
+        </div>
+    </div>
+
+    <div id="in-process" class="tab-content">
+        <div class="booking-card">
+            <h3>Booking #67890</h3>
+            <p>Service: Ceramic Coating</p>
+            <p>Status: In Process</p>
+            <p>Date: 23rd March 2025</p>
+        </div>
+    </div>
+
+    <div id="completed" class="tab-content">
+        <div class="booking-card">
+            <h3>Booking #54321</h3>
+            <p>Service: Wax & Polishing</p>
+            <p>Status: Completed</p>
+            <p>Date: 20th March 2025</p>
+        </div>
+    </div>
+</div>
+
+<script>
+    function showTab(tabId) {
+        document.querySelectorAll('.tab-content').forEach(tab => {
+            tab.classList.remove('active');
+        });
+
+        document.querySelectorAll('.tab').forEach(tab => {
+            tab.classList.remove('active');
+        });
+
+        document.getElementById(tabId).classList.add('active');
+        event.target.classList.add('active');
+    }
+</script>
+<footer>
+    <p>© 2025 CarWashPro. All rights reserved.</p>
+</footer>
+</body>
+</html>

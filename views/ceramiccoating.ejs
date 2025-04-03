@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ceramic Coating | Car Wash Management</title>
+    <link rel="stylesheet" href="/css/home.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f8f9fa;
+        }
+        .hero {
+            background: url('/images/ceramic_coating.jpg') no-repeat center center/cover;
+            height: 60vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #fff;
+            text-align: center;
+            position: relative;
+        }
+        .hero::after {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background: rgba(0, 0, 0, 0.5);
+        }
+        .hero-content {
+            position: relative;
+            z-index: 1;
+        }
+        .hero-content h1 {
+            font-size: 48px;
+            margin-bottom: 15px;
+        }
+        .hero-content p {
+            font-size: 20px;
+        }
+        .container {
+            max-width: 1200px;
+            margin: auto;
+            padding: 40px 20px;
+        }
+        .section {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+        .steps {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+        .step {
+            background: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            text-align: center;
+        }
+        .step img {
+            width: 100%;
+            border-radius: 10px;
+            margin-bottom: 15px;
+        }
+        .btn {
+            display: inline-block;
+            background: #ff9800;
+            color: #fff;
+            padding: 12px 30px;
+            border-radius: 25px;
+            font-size: 18px;
+            text-decoration: none;
+            margin-top: 20px;
+        }
+        .btn:hover {
+            background: #e68900;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="navbar">
+            <h1 class="logo">CarWashPro</h1>
+            <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="/services">Services</a></li>
+                <li><a href="/about">About</a></li>
+                <li><a href="/contact">Contact</a></li>
+                <!-- <li><a href="/login" class="login-container1">Login</a></li> -->
+            </ul>
+        </div>
+    </header>
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Ceramic Coating</h1>
+            <p>Ultimate protection and long-lasting shine for your vehicle.</p>
+        </div>
+    </section>
+    
+    <div class="container">
+        <section class="section">
+            <h2>Why Choose Ceramic Coating?</h2>
+            <p>Ceramic Coating provides a protective layer that shields your car from dirt, UV rays, and minor scratches while giving it a sleek, glossy finish.</p>
+        </section>
+        
+        <section class="section">
+            <h2>Our 4-Step Ceramic Coating Process</h2>
+            <div class="steps">
+                <div class="step">
+                    <img src="/images/inspection.jpg" alt="Inspection">
+                    <h3>Step 1: Inspection & Preparation</h3>
+                    <p>We inspect and thoroughly clean the surface before coating.</p>
+                </div>
+                <div class="step">
+                    <img src="/images/application.jpg" alt="Application">
+                    <h3>Step 2: Application</h3>
+                    <p>A professional-grade ceramic solution is evenly applied.</p>
+                </div>
+                <div class="step">
+                    <img src="/images/buffing.jpg" alt="Buffing">
+                    <h3>Step 3: Buffing</h3>
+                    <p>The surface is polished for a flawless, glossy finish.</p>
+                </div>
+                <div class="step">
+                    <img src="/images/final_touch.jpg" alt="Final Touch">
+                    <h3>Step 4: Final Inspection</h3>
+                    <p>A final check ensures perfection and long-lasting protection.</p>
+                </div>
+            </div>
+        </section>
+        
+        <section class="section">
+            <h2>Ready to Protect Your Car?</h2>
+            <a href="/book" class="btn">Book Your Ceramic Coating</a>
+        </section>
+    </div>
+    <footer>
+        <p>© 2025 CarWashPro. All rights reserved.</p>
+    </footer> 
+</body>
+</html>

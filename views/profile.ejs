@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Profile</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background-color: #f4f4f4;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        /* Navbar */
+        .navbar {
+            width: 100%;
+            background: #007BFF;
+            padding: 15px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: 1000;
+        }
+
+        .navbar .logo {
+            color: white;
+            font-size: 24px;
+            font-weight: bold;
+            margin-left: 20px;
+        }
+
+        .navbar ul {
+            list-style: none;
+            display: flex;
+            margin-right: 20px;
+        }
+
+        .navbar ul li {
+            margin: 0 15px;
+        }
+
+        .navbar ul li a {
+            text-decoration: none;
+            color: white;
+            font-size: 16px;
+        }
+
+        .navbar ul li a:hover {
+            text-decoration: underline;
+        }
+
+        /* Profile Container */
+        .profile-container {
+            width: 60%;
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+            margin-top: 80px; /* Avoid overlap with navbar */
+            margin-bottom: 50px; /* Avoid overlap with footer */
+        }
+
+        .profile-header {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .profile-pic {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 3px solid #007BFF;
+        }
+
+        .profile-info {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            padding: 10px;
+        }
+
+        .profile-info div {
+            display: flex;
+            justify-content: space-between;
+            padding: 10px;
+            background: #e9ecef;
+            border-radius: 5px;
+        }
+
+        .car-section {
+            margin-top: 20px;
+        }
+
+        .car-item {
+            background: #f8f9fa;
+            padding: 10px;
+            border-radius: 5px;
+            margin-bottom: 10px;
+        }
+
+        .logout-btn {
+            width: 100%;
+            padding: 10px;
+            background: #dc3545;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            margin-top: 20px;
+        }
+
+        .logout-btn:hover {
+            background: #c82333;
+        }
+
+        /* Footer */
+        .footer {
+            width: 100%;
+            background: #007BFF;
+            color: white;
+            text-align: center;
+            padding: 15px;
+            position: fixed;
+            bottom: 0;
+            left: 0;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navbar -->
+    <header class="navbar">
+        <div class="logo">CarWashPro</div>
+        <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="/services">Services</a></li>
+            <li><a href="/profile">Profile</a></li>
+            <li><a href="/logout">Logout</a></li>
+        </ul>
+    </header>
+
+    <!-- Profile Section -->
+    <div class="profile-container">
+        <div class="profile-header">
+            <img src="https://via.placeholder.com/120" alt="Profile Picture" class="profile-pic">
+            <h2>Lalit Kumar Pathak</h2>
+            <p>Software Developer</p>
+        </div>
+
+        <div class="profile-info">
+            <div><strong>Email:</strong> lalit@example.com</div>
+            <div><strong>Phone:</strong> +91 98765 43210</div>
+            <div><strong>Address:</strong> Agra, Uttar Pradesh, India</div>
+        </div>
+
+        <div class="car-section">
+            <h3>My Cars</h3>
+            <div class="car-item">🚗 Toyota Corolla - UP80 XX 1234</div>
+            <div class="car-item">🚙 Honda Civic - UP32 AB 5678</div>
+            <div class="car-item">🚘 Ford Mustang - DL10 XYZ 4321</div>
+            <div class="car-item">🚖 Maruti Swift - RJ14 MN 9988</div>
+            <div class="car-item">🚕 BMW X5 - MH01 PQ 5672</div>
+        </div>
+
+        <button class="logout-btn">Logout</button>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>© 2025 CarWashPro. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>

@@ -38,19 +38,36 @@ router.get('/detailing', (req, res) => {
     res.render('detailing', { title: 'detailing' });
 });
 
-// );
-// router.get("/Register", async (req, res) => {
- 
-   
-//     res.render('Register', { title: 'Register Page' });
+router.get('/polishing', (req, res) => {
+    res.render('polishing', { title: 'polishing' });
+});
 
-  
-// });
-// router.get("/Dashboard", async (req, res) => {
- 
-   
-//     res.render('Dashboard', { title: 'Dashboard Page' });
+router.get('/exterior-wash', (req, res) => {
+    res.render('exterior-wash', { title: 'exterior-wash' });
+});
 
-  
-// });
+router.get('/interiorcleaning', (req, res) => {
+    res.render('interiorcleaning', { title: 'interiorcleaning' });
+});
+
+router.get('/wax_polosh', (req, res) => {
+    res.render('wax_polosh', { title: 'wax_polosh' });
+});
+
+router.get('/engineCleaning', (req, res) => {
+    res.render('engineCleaning', { title: 'engineCleaning' });
+});
+
+router.get('/ceramiccoating', (req, res) => {
+    res.render('ceramiccoating', { title: 'ceramiccoating' });
+});
+
+router.get('/bookings', (req, res) => {
+    res.render('bookings', { title: 'booking' });
+});
+
+router.get('/profile', (req, res) => {
+    res.render('profile', { title: 'profile' });
+});
+
 export default router;

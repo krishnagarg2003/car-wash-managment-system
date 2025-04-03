@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exterior Car Wash | CarWashPro</title>
+    <link rel="stylesheet" href="/css/home.css">
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Arial', sans-serif;
+            background-color: #f5f5f5;
+            color: #333;
+        }
+
+        .hero {
+            background: url('/images/car1.jpg') no-repeat center center/cover;
+            height: 50vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            text-align: center;
+            position: relative;
+        }
+
+        .hero::after {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background: rgba(0, 0, 0, 0.5);
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 1;
+        }
+
+        .hero-content h2 {
+            font-size: 42px;
+        }
+
+        .hero-content p {
+            font-size: 20px;
+        }
+
+        /* Service Details */
+        .service-details {
+    padding: 50px 20px;
+    text-align: center;
+    background: white;
+    display: flex;
+    justify-content: center;
+}
+
+.container {
+    display: flex;
+    max-width: 1200px;
+    width: 100%;
+    align-items: center;
+    gap: 30px;
+    flex-wrap: nowrap; /* Prevents stacking on larger screens */
+}
+
+.service-img {
+    flex: 1;
+    max-width: 50%; /* Ensures it takes half the space */
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.details {
+    flex: 1;
+    text-align: left;
+    max-width: 50%; /* Ensures text takes up half the space */
+    padding: 20px;
+}
+
+.details h2 {
+    font-size: 28px;
+    margin-bottom: 15px;
+}
+
+.details p {
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+.details ul {
+    list-style: none;
+    padding: 0;
+}
+
+.details ul li {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.btn-primary {
+    background-color: #ff9800;
+    color: white;
+    padding: 12px 25px;
+    border-radius: 25px;
+    text-decoration: none;
+    font-size: 18px;
+    display: inline-block;
+    margin-top: 20px;
+    transition: background 0.3s;
+}
+
+.btn-primary:hover {
+    background-color: #e68900;
+}
+
+@media (max-width: 992px) {
+    .container {
+        flex-direction: column; /* Stack image and content on small screens */
+        text-align: center;
+    }
+
+    .service-img {
+        max-width: 90%; /* Ensure full width */
+    }
+
+    .details {
+        max-width: 100%; /* Use full width */
+        text-align: center;
+    }
+}
+
+
+        /* Footer */
+        footer {
+            background-color: #1a73e8;
+            color: white;
+            text-align: center;
+            padding: 15px 0;
+            margin-top: 40px;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                flex-direction: column;
+                text-align: center;
+            }
+            
+            .service-img {
+                width: 90%;
+            }
+            
+            .details {
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="navbar">
+            <h1 class="logo">CarWashPro</h1>
+            <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="/services">Services</a></li>
+                <li><a href="/about">About</a></li>
+                <li><a href="/contact">Contact</a></li>
+                <!-- <li><a href="/login" class="login-container1">Login</a></li> -->
+            </ul>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="hero-content">
+            <h2>Exterior Car Wash</h2>
+            <p>Give your car a sparkling new look with our premium exterior wash.</p>
+        </div>
+    </section>
+
+    <section class="service-details">
+        <div class="container">
+            <img src="/images/exterir.webp" alt="Exterior Wash" class="service-img">
+            <div class="details">
+                <h2>Why Choose Our Exterior Car Wash?</h2>
+                <p>We use advanced cleaning techniques and high-quality products to remove dirt, dust, and grime, ensuring a spotless finish.</p>
+                <ul>
+                    <li>✅ High-pressure cleaning</li>
+                    <li>✅ Eco-friendly foam wash</li>
+                    <li>✅ Gentle hand-wash technique</li>
+                    <li>✅ Streak-free drying</li>
+                    <li>✅ Water repellent coating</li>
+                </ul>
+                <a href="/book" class="btn-primary">Book Now</a>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>© 2025 CarWashPro. All rights reserved.</p>
+    </footer>
+</body>
+</html>
