@@ -96,5 +96,29 @@
             </div>
         </div>
     </div>
+    <script>
+        async function handleSignup(email, password, name) {
+          try {
+            const userCredential = await auth.createUserWithEmailAndPassword(email, password);
+            const user = userCredential.user;
+      
+            // Save user data to Firestore under "user" collection
+            await db.collection("user").doc(user.uid).set({
+              name: name,
+              email: email,
+              createdAt: new Date()
+            });
+      
+            alert("Signup successful!");
+            window.location.href = "/profile"; // redirect to profile
+          } catch (error) {
+            console.error("Signup Error:", error.message);
+            alert("Signup failed: " + error.message);
+          }
+        }
+      
+        // Example: bind this to your signup form
+        // handleSignup('test@gmail.com', '123456', 'Krishna Garg');
+      </script>
 </body>
 </html>

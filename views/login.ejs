@@ -94,5 +94,22 @@
             </div>
         </div>
     </div>
+    <script>
+        async function handleLogin(email, password) {
+          try {
+            const userCredential = await auth.signInWithEmailAndPassword(email, password);
+            const user = userCredential.user;
+      
+            alert("Login successful!");
+            window.location.href = "/profile"; // redirect to profile
+          } catch (error) {
+            console.error("Login Error:", error.message);
+            alert("Login failed: " + error.message);
+          }
+        }
+      
+        // Example usage:
+        // handleLogin('test@gmail.com', '123456');
+      </script>      
 </body>
 </html>
