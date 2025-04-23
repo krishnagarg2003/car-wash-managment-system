@@ -5,6 +5,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Car Wash Management System</title>
     <link rel="stylesheet" href="/css/home.css">
+    <!-- Firebase SDKs -->
+    <script src="https://www.gstatic.com/firebasejs/9.1.3/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.1.3/firebase-auth.js"></script>
+    <script>
+        // Initialize Firebase
+        const firebaseConfig = {
+            apiKey: "AIzaSyBRGZIV5oUqBsZBkvMkiZkOwdsh_T3E8wU",
+            authDomain: "car-wash-managment.firebaseapp.com",
+            projectId: "car-wash-managment",
+            storageBucket: "car-wash-managment.appspot.com",
+            messagingSenderId: "579258805778",
+            appId: "1:579258805778:web:bd5e22f77146d2ebd332cb",
+        };
+        const app = firebase.initializeApp(firebaseConfig);
+        const auth = firebase.auth();
+    </script>
 </head>
 <body>
     <header>
@@ -16,7 +32,9 @@
                 <li><a href="/about">About</a></li>
                 <li><a href="/contact">Contact</a></li>
                 <li><a href="/bookings">Booking</a></li>
+                <!-- Profile link is initially hidden -->
                 <li id="profile-section" style="display: none;"><a href="/profile">Profile</a></li>
+                <!-- Login button is initially visible -->
                 <li id="login-section"><a href="/login" class="login-container1">Login</a></li>
             </ul>
         </div>
@@ -45,28 +63,32 @@
                     <h3>Detailing</h3>
                 </a>
             </div>
-            
             <div class="card">
                 <a href="/polishing">
                     <img src="/images/car_details.jpg" alt="Polishing">
                     <h3>Polishing</h3>
                 </a>
             </div>
-            
         </div>
     </section>
 
     <footer>
         <p>© 2025 CarWashPro. All rights reserved.</p>
     </footer>
-    <script>
-        // Simulating user authentication check
-        const userLoggedIn = true; // Change this based on actual authentication status
 
-        if (userLoggedIn) {
-            document.getElementById("profile-section").style.display = "inline";
-            document.getElementById("login-section").style.display = "none";
-        }
+    <script>
+        // Firebase authentication check on page load
+        firebase.auth().onAuthStateChanged(user => {
+            if (user) {
+                // User is logged in
+                document.getElementById("profile-section").style.display = "inline"; // Show profile link
+                document.getElementById("login-section").style.display = "none";    // Hide login button
+            } else {
+                // User is not logged in
+                document.getElementById("profile-section").style.display = "none";  // Hide profile link
+                document.getElementById("login-section").style.display = "inline";  // Show login button
+            }
+        });
     </script>
 </body>
 </html>
